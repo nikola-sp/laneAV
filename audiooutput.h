@@ -9,6 +9,7 @@ class AudioOutput : public QObject
     Q_OBJECT
 public:
     explicit AudioOutput(QObject *parent = 0);
+    void volume(int n);
 
 signals:
 

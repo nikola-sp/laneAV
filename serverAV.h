@@ -9,7 +9,6 @@ class ServerAV : public QObject
     Q_OBJECT
 public:
     explicit ServerAV(quint16 portIn, QObject *parent = 0);
-
 signals:
 
 public slots:

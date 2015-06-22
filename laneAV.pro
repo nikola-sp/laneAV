@@ -5,7 +5,7 @@
 #-------------------------------------------------
 
 QT       += core gui
-QT       += multimedia
+QT       += multimedia multimediawidgets
 QT       += network
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
@@ -19,12 +19,14 @@ SOURCES += main.cpp\
     serverAV.cpp \
     audioinput.cpp \
     audiooutput.cpp \
-    ClientAV.cpp
+    ClientAV.cpp \
+    videoinput.cpp
 
 HEADERS  += laneav.h \
     serverAV.h \
     audioinput.h \
     audiooutput.h \
-    clientAV.h
+    clientAV.h \
+    videoinput.h
 
 FORMS    += laneav.ui

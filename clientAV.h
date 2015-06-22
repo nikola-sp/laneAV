@@ -10,6 +10,7 @@ class ClientAV : public QObject
     Q_OBJECT
 public:
     explicit ClientAV(QHostAddress host, quint16 portOut, QObject *parent = 0);
+    void volume(int n);
 
 signals:
 

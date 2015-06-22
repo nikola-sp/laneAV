@@ -1,4 +1,5 @@
 #include "audioinput.h"
+#include <QDebug>
 
 AudioInput::AudioInput(QAudioDeviceInfo devinfo, QObject *parent) : QObject(parent)
 {
@@ -27,5 +28,14 @@ void AudioInput::readyRead()
         deviceIn->read(dataIn.data(), len);
     }
     emit dataReady(dataIn);
+}
+
+void AudioInput::mute(bool v){
+    if (v)
+        deviceIn->blockSignals(true);
+    else{
+        deviceIn->blockSignals(false);
+    }
+
 }
 

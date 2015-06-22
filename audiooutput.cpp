@@ -20,3 +20,8 @@ void AudioOutput::writeData(QByteArray dataOut)
 {
     deviceOut->write(dataOut.data(), dataOut.size());
 }
+
+void AudioOutput::volume(int n){
+    audioOut->setVolume(qreal(n/100.0f));
+}
+

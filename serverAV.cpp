@@ -25,4 +25,3 @@ void ServerAV::writeData(QByteArray dataIn)
     if (socketIn)
         socketIn->write(dataIn);
 }
-

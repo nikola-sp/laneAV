@@ -9,6 +9,7 @@
 #include "audioinput.h"
 #include "serverAV.h"
 #include "clientAV.h"
+#include "videoinput.h"
 
 namespace Ui {
 class laneAV;
@@ -27,13 +28,25 @@ private slots:
 
     void on_micOn_clicked();
 
+    void on_SoundOn_clicked();
+
+    void on_volSlider_valueChanged(int value);
+
+    void on_cbCamDev_currentTextChanged(const QString &arg1);
+
 private:
     Ui::laneAV *ui;
     bool mic_on=true;
+    bool out_on=true;
+    bool vid_on=true;
     AudioInput *input;
     ServerAV *server;
     ClientAV *client;
-    QHostAddress partnerIp = QHostAddress("192.168.0.101");
+    videoinput *videoIn;
+    QHostAddress partnerIp = QHostAddress("192.168.0.102");
+    QCamera *camera;
+    QCameraViewfinder *viewfinder;
+    QCameraImageCapture *imageCapture;
 
 };
 

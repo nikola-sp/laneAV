@@ -17,3 +17,7 @@ void ClientAV::readyRead()
     output.writeData(dataOut);
 }
 
+void ClientAV::volume(int n){
+    output.volume(n);
+}
+
